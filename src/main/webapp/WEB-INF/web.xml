@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+  
+
+  <!--jsp页面的配置信息-->
+  <jsp-config>
+    <jsp-property-group>
+      <!--拦截路径，以/jsp为路径的-->
+      <url-pattern>/jsp/*</url-pattern>
+      <!--el表达式是否忽略：true：忽略，false:不忽略-->
+      <el-ignored>false</el-ignored>
+      <!--jsp页面上的java代码是否有效：true：无效，false：有效-->
+      <scripting-invalid>false</scripting-invalid>
+      <!--在拦截到的所有jsp页面前面引入该页面-->
+      <include-prelude>/taglib.jsp</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
+</web-app>
