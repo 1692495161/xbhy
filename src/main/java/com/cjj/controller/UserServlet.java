@@ -129,7 +129,7 @@ public class UserServlet extends BaseServlet {
         //回显部门信息
         List<Dept> depts = deptService.list();
         request.setAttribute("dept", depts);
-        request.getRequestDispatcher("/jsp/common/update.jsp").forward(request, response);
+        request.getRequestDispatcher("/jsp/user/update.jsp").forward(request, response);
     }
 
     protected void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

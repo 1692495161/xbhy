@@ -25,16 +25,16 @@ public class EmailServlet extends BaseServlet {
         String email = request.getParameter("email");
         HttpSession session = request.getSession();
         //返回一个数据给前端
-        PrintWriter pw=response.getWriter();
+        PrintWriter pw = response.getWriter();
         if (!(email == null && "".equals(email))) {
             //获取随机验证码
             String randomCode = Math.random() + "";
             randomCode = randomCode.substring(randomCode.length() - 5, randomCode.length() - 1);
             //调用发送邮件的方法
-            Boolean b=EmailUtil.sendEmail(email,randomCode);
+            Boolean b = EmailUtil.sendEmail(email, randomCode);
             //将验证码存入session中
-            if (b){
-                session.setAttribute(SysConstant.SESSION_CODE,randomCode);
+            if (b) {
+                session.setAttribute(SysConstant.SESSION_CODE, randomCode);
                 session.setMaxInactiveInterval(60);
                 pw.write("1");
                 return;

@@ -11,20 +11,21 @@
     <title>Title</title>
 </head>
 <body>
-<%@include file="../top/top.jsp" %>
-<%@include file="../left/left.jsp" %>
+<%@include file="../common/top.jsp" %>
+<%@include file="../common/left.jsp" %>
 <div id="right">
-    <form action="/user/list">
+    <a href="/jsp/user/add.jsp" class="btn btn-warning btn-default btn-sm-2">添加</a>
+    <a href="/poi/exportExcel?&username=${username}&select=${sex}" class="btn btn-warning btn-default btn-sm-2">导出Excel</a>
+    <form action="/user/list"method="post">
         用户名：<input type="text" name="username" id="username" value="${username}">
         性别：<select name="select" id="select">
                 <option value="-1" <c:if test="${sex=='-1'}">selected</c:if>>请选择</option>
-                <option value="1" <c:if test="${sex=='1'}">selected</c:if>>男</option>
-                <option value="0" <c:if test="${sex=='0'}">selected</c:if>>女</option>
+                <option value="1"  <c:if test="${sex=='1'}">selected</c:if>>男</option>
+                <option value="0"  <c:if test="${sex=='0'}">selected</c:if>>女</option>
              </select>
         <input type="submit" value="查询" class="btn btn-info">
     </form>
 
-    <a href="/jsp/common/add.jsp" class="btn btn-info btn-default btn-sm" style="float: right">添加</a>
 
     <table class="table table-hover">
         <tr>
@@ -58,7 +59,7 @@
                 </td>
                 <td>
                     <a href="/user/getUserById?id=${user.id}" class="btn btn-info">修改</a>
-                    <a href="/user/delete?id=${user.id}" class="btn btn-info">删除</a>
+                    <a href="/user/delete?id=${user.id}" class="btn btn-warning">删除</a>
                 </td>
             </tr>
         </c:forEach>

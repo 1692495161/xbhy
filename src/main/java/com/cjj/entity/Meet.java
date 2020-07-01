@@ -7,14 +7,23 @@ public class Meet {
 
   private Integer id;
   private String deptName;
+  private String name;
   private Integer deptId;
   private String title;
   private String content;
   private Date publishDate;
-  private Date startTime;
+  private String startTime;
   private Date endTime;
   private Integer status;
   private String makeUser;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
   public Integer getId() {
     return id;
@@ -64,11 +73,11 @@ public class Meet {
     this.publishDate = publishDate;
   }
 
-  public Date getStartTime() {
+  public String getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(Date startTime) {
+  public void setStartTime(String startTime) {
     this.startTime = startTime;
   }
 

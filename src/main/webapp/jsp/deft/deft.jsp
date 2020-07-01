@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-<%@include file="../top/top.jsp" %>
-<%@include file="../left/left.jsp" %>
+<%@include file="../common/top.jsp" %>
+<%@include file="../common/left.jsp" %>
 <div id="right">部门管理界面</div>
 </body>
 </html>

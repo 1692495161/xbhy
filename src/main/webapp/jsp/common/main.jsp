@@ -10,9 +10,16 @@
 <head>
     <title>首页</title>
 </head>
+
 <body>
-<%@include file="/jsp/top/top.jsp"%>
-<%@include file="/jsp/left/left.jsp"%>
-<div id="right">欢迎界面！</div>
+<%@include file="/jsp/common/top.jsp" %>
+<%@include file="/jsp/common/left.jsp" %>
+<div id="right">
+    <div style="left: 40%;top: 30%;position: relative">
+        <h1>欢迎光临！！<br><br>
+            <small>小标会议</small>
+        </h1>
+    </div>
+</div>
 </body>
 </html>
